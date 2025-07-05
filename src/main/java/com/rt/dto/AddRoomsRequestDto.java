@@ -47,7 +47,6 @@ public class AddRoomsRequestDto {
 	
 	private String description;
 
-	@NotNull
 	
 	private String room_image_path;
 

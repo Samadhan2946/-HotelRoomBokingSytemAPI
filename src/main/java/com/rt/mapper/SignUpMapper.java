@@ -17,7 +17,7 @@ public class SignUpMapper {
 		sign.setLastName(reqDto.getLastName());
 		sign.setMobile(reqDto.getMobile());
 		sign.setPassword(reqDto.getPassword());
-		sign.setRole(reqDto.getRole());
+	
 		
 		return sign;
 	}

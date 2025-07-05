@@ -13,4 +13,6 @@ public interface SignUpRepository extends CrudRepository<SignUp, Integer>  {
 
 	void save(@Valid SignUpRequestDto reqDto);
 
+	SignUp findByEmail(String email);
+
 }

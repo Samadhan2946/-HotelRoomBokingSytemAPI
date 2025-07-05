@@ -33,5 +33,5 @@ public class SignUp {
 
 	private String password;
 
-	private String role;
+	
 }
