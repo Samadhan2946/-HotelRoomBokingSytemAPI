@@ -25,11 +25,12 @@ public class RoomsServiceImpl implements RoomsService {
 	private RoomsMapper addRoomsMapper;
 
 	@Override
-	public void addRoomsData(AddRoomsRequestDto roomReqDto) {
+	public boolean addRoomsData(AddRoomsRequestDto roomReqDto) {
 
 		AddRooms addRooms = addRoomsMapper.toEntity(roomReqDto);
 
-		addRoomsRepository.save(addRooms);
+		boolean isAdded=addRoomsRepository.save(addRooms) != null;
+		return isAdded;
 
 	}
 

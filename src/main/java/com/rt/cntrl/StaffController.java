@@ -26,16 +26,19 @@ public class StaffController {
 	private StaffService staffService;
 
 	@PostMapping
-	public void addStaffData(@RequestBody StaffRequestDto staffReqDto) {
+	public ResponseEntity<String> addStaffData(@RequestBody StaffRequestDto staffReqDto) {
 
-		staffService.addStaffData(staffReqDto);
+		boolean isAdded=staffService.addStaffData(staffReqDto);
+		
+	
+		if (isAdded) {
+			return ResponseEntity.ok("staff is added");
+		} else {
+			return ResponseEntity.ok("staff is not added");
+		}
+		
 
-//		System.out.println(staffReqDto.getJoiningDate());
-//		System.out.println(staffReqDto.getAddress());
-//		System.out.println(staffReqDto.getFullName());
-//		System.out.println(staffReqDto.getGender());
-//		System.out.println(staffReqDto.getPhoneNumber());
-//		System.out.println(staffReqDto.getEmail());
+//		
 	}
 
 	@GetMapping("/room-List")
@@ -57,20 +60,27 @@ public class StaffController {
 	}
 
 	@PostMapping("/update")
-	public void updateStaffById(@RequestBody StaffRequestDto staffRequestDto) {
+	public ResponseEntity<String> updateStaffById(@RequestBody StaffRequestDto staffRequestDto) {
 
 		StaffResponseDto staffResponseDto = staffService.updateStaffById(staffRequestDto);
 
 		if (staffResponseDto != null) {
-			ResponseEntity.ok("Data is Updated");
+			return ResponseEntity.ok("staff is Updated");
 		} else {
-			ResponseEntity.ok("Data is not Updated");
+			return ResponseEntity.ok("staff is not Updated");
 		}
 	}
 
 	@GetMapping("/deleteStaffById")
-	public void deleteStaffById(@RequestParam int id) {
+	public ResponseEntity<String> deleteStaffById(@RequestParam int id) {
 
-		staffService.deleteStaffById(id);
+		String isDelete=staffService.deleteStaffById(id);
+		
+
+		if (isDelete != null) {
+			return ResponseEntity.ok("staff is Deleted ");
+		} else {
+			return ResponseEntity.ok("staff is not Deleted");
+		}
 	}
 }

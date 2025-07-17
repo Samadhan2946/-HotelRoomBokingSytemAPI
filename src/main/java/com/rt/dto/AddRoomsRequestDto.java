@@ -37,7 +37,7 @@ public class AddRoomsRequestDto {
 
 	@NotNull
 	@Size(max = 40)
-	private int price_per_night;
+	private double price_per_night;
 
 	@NotNull
 	

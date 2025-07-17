@@ -8,7 +8,7 @@ import com.rt.dto.AddRoomsResponseDto;
 
 public interface RoomsService {
 
-	void addRoomsData(AddRoomsRequestDto roomReqDto);
+	boolean addRoomsData(AddRoomsRequestDto roomReqDto);
 	
 	List<AddRoomsResponseDto> getRoomList();
 

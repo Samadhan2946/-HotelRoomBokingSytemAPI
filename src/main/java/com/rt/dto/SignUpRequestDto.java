@@ -36,5 +36,8 @@ public class SignUpRequestDto {
 	@Size(max=32)
 	private String password;
 	
+	@NotNull
+	private String role;
+	
 	
 }

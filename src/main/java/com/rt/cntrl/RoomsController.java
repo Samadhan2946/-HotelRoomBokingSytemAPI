@@ -3,6 +3,8 @@ package com.rt.cntrl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,15 +21,21 @@ import com.rt.service.RoomsService;
 @RestController
 @RequestMapping("/addRooms")
 @CrossOrigin("*")
-public class AddRoomsController {
+public class RoomsController {
 
 	@Autowired
 	private RoomsService roomsService;
 
 	@PostMapping
-	public void addRooms(@RequestBody AddRoomsRequestDto roomReqDto) {
+	public ResponseEntity<String> addRooms(@RequestBody AddRoomsRequestDto roomReqDto) {
 
-		roomsService.addRoomsData(roomReqDto);
+		boolean isAdded=roomsService.addRoomsData(roomReqDto);
+		if (isAdded) {
+			return ResponseEntity.ok("room is Added");
+		} else {
+			return ResponseEntity.ok("room is not Added");
+		}
+		
 
 	}
 
@@ -39,26 +47,30 @@ public class AddRoomsController {
 
 	@GetMapping("/getById")
 	public AddRoomsResponseDto getById(@RequestParam Long id) {
-	   
-		AddRoomsResponseDto resDto=roomsService.getById(id);
-		
-		System.out.println(resDto.getAc_type());
+
+		AddRoomsResponseDto resDto = roomsService.getById(id);
+
 		return resDto;
 	}
-	
+
 	@PostMapping("/updateRoom")
 	public AddRoomsResponseDto updateRoom(@RequestBody AddRoomsRequestDto reqDto) {
-		
-		AddRoomsResponseDto resDto=	roomsService.updateRooms(reqDto);
-		
-		return resDto;
-		
-	}
 	
+		AddRoomsResponseDto resDto = roomsService.updateRooms(reqDto);
+
+		return resDto;
+
+	}
+
 	@GetMapping("/delete")
-	public String deleteRoom(@RequestParam Long id) {
-		
-		String added= roomsService.deleteRoom(id);
-		return added;
+	public ResponseEntity<String> deleteRoom(@RequestParam Long id) {
+
+		String roomDelete = roomsService.deleteRoom(id);
+
+		if (roomDelete != null) {
+			return ResponseEntity.ok("room is Deleted ");
+		} else {
+			return ResponseEntity.ok("room is not Deleted");
+		}
 	}
 }
