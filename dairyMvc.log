@@ -3879,3 +3879,60 @@ Consider defining a bean of type 'com.rt.service.CustomerService' in your config
 2025-07-17 16:01:40.146  INFO 13296 --- [http-nio-9292-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-07-17 16:01:40.147  INFO 13296 --- [http-nio-9292-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
 2025-07-17 16:01:40.147  INFO 13296 --- [http-nio-9292-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 0 ms
+2025-07-18 10:12:23.112  INFO 6584 --- [restartedMain] c.r.RoomBooking_Api                      : Starting RoomBooking_Api using Java 17.0.10 on DESKTOP-3EG1QM1 with PID 6584 (C:\Users\Admin\Desktop\MainHotelRoomBooking\-HotelRoomBokingSytemAPI\target\classes started by Admin in C:\Users\Admin\Desktop\MainHotelRoomBooking\-HotelRoomBokingSytemAPI)
+2025-07-18 10:12:23.132  INFO 6584 --- [restartedMain] c.r.RoomBooking_Api                      : No active profile set, falling back to 1 default profile: "default"
+2025-07-18 10:12:23.264  INFO 6584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-07-18 10:12:23.265  INFO 6584 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-07-18 10:12:24.851  INFO 6584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-18 10:12:25.010  INFO 6584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 128 ms. Found 5 JPA repository interfaces.
+2025-07-18 10:12:26.293  INFO 6584 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 9292 (http)
+2025-07-18 10:12:26.330  INFO 6584 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-07-18 10:12:26.332  INFO 6584 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-07-18 10:12:26.753  INFO 6584 --- [restartedMain] o.a.j.s.TldScanner                       : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-18 10:12:26.776  INFO 6584 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-07-18 10:12:26.777  INFO 6584 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3510 ms
+2025-07-18 10:12:27.088  INFO 6584 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-18 10:12:27.221  INFO 6584 --- [restartedMain] o.h.Version                              : HHH000412: Hibernate ORM core version 5.6.14.Final
+2025-07-18 10:12:27.578  INFO 6584 --- [restartedMain] o.h.a.c.Version                          : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2025-07-18 10:12:27.784  INFO 6584 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Starting...
+2025-07-18 10:12:28.540  INFO 6584 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-1 - Start completed.
+2025-07-18 10:12:28.588  INFO 6584 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-07-18 10:12:30.092  INFO 6584 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-07-18 10:12:30.105  INFO 6584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-18 10:12:31.056  WARN 6584 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-18 10:12:33.100  WARN 6584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-07-18 10:12:33.520  INFO 6584 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 9292 (http) with context path ''
+2025-07-18 10:12:33.778  INFO 6584 --- [restartedMain] c.r.RoomBooking_Api                      : Started RoomBooking_Api in 11.574 seconds (JVM running for 12.966)
+2025-07-18 10:12:44.209  INFO 6584 --- [http-nio-9292-exec-1] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-18 10:12:44.209  INFO 6584 --- [http-nio-9292-exec-1] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-07-18 10:12:44.217  INFO 6584 --- [http-nio-9292-exec-1] o.s.w.s.DispatcherServlet                : Completed initialization in 8 ms
+2025-07-18 10:15:56.426  INFO 6584 --- [File Watcher] rtingClassPathChangeChangedEventListener : Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+2025-07-18 10:15:56.445  INFO 6584 --- [Thread-1] o.a.c.c.StandardService                  : Stopping service [Tomcat]
+2025-07-18 10:15:56.449  INFO 6584 --- [Thread-1] o.a.c.c.C.[.[.[/]                        : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2025-07-18 10:15:56.460  INFO 6584 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-07-18 10:15:56.466  INFO 6584 --- [Thread-1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown initiated...
+2025-07-18 10:15:56.492  INFO 6584 --- [Thread-1] c.z.h.HikariDataSource                   : HikariPool-1 - Shutdown completed.
+2025-07-18 10:15:56.870  INFO 6584 --- [restartedMain] c.r.RoomBooking_Api                      : Starting RoomBooking_Api using Java 17.0.10 on DESKTOP-3EG1QM1 with PID 6584 (C:\Users\Admin\Desktop\MainHotelRoomBooking\-HotelRoomBokingSytemAPI\target\classes started by Admin in C:\Users\Admin\Desktop\MainHotelRoomBooking\-HotelRoomBokingSytemAPI)
+2025-07-18 10:15:56.874  INFO 6584 --- [restartedMain] c.r.RoomBooking_Api                      : No active profile set, falling back to 1 default profile: "default"
+2025-07-18 10:15:57.373  INFO 6584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-07-18 10:15:57.431  INFO 6584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 56 ms. Found 5 JPA repository interfaces.
+2025-07-18 10:15:57.618  INFO 6584 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat initialized with port(s): 9292 (http)
+2025-07-18 10:15:57.622  INFO 6584 --- [restartedMain] o.a.c.c.StandardService                  : Starting service [Tomcat]
+2025-07-18 10:15:57.623  INFO 6584 --- [restartedMain] o.a.c.c.StandardEngine                   : Starting Servlet engine: [Apache Tomcat/9.0.70]
+2025-07-18 10:15:57.797  INFO 6584 --- [restartedMain] o.a.j.s.TldScanner                       : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-07-18 10:15:57.805  INFO 6584 --- [restartedMain] o.a.c.c.C.[.[.[/]                        : Initializing Spring embedded WebApplicationContext
+2025-07-18 10:15:57.805  INFO 6584 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 909 ms
+2025-07-18 10:15:57.887  INFO 6584 --- [restartedMain] o.h.j.i.u.LogHelper                      : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-07-18 10:15:57.900  INFO 6584 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Starting...
+2025-07-18 10:15:57.931  INFO 6584 --- [restartedMain] c.z.h.HikariDataSource                   : HikariPool-2 - Start completed.
+2025-07-18 10:15:57.932  INFO 6584 --- [restartedMain] o.h.d.Dialect                            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2025-07-18 10:15:58.256  INFO 6584 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2025-07-18 10:15:58.256  INFO 6584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-07-18 10:15:58.538  WARN 6584 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-07-18 10:15:58.692  WARN 6584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-07-18 10:15:58.717  INFO 6584 --- [restartedMain] o.s.b.w.e.t.TomcatWebServer              : Tomcat started on port(s): 9292 (http) with context path ''
+2025-07-18 10:15:58.730  INFO 6584 --- [restartedMain] c.r.RoomBooking_Api                      : Started RoomBooking_Api in 2.138 seconds (JVM running for 217.919)
+2025-07-18 10:15:58.736  INFO 6584 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2025-07-18 10:17:30.229  INFO 6584 --- [http-nio-9292-exec-2] o.a.c.c.C.[.[.[/]                        : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-07-18 10:17:30.230  INFO 6584 --- [http-nio-9292-exec-2] o.s.w.s.DispatcherServlet                : Initializing Servlet 'dispatcherServlet'
+2025-07-18 10:17:30.233  INFO 6584 --- [http-nio-9292-exec-2] o.s.w.s.DispatcherServlet                : Completed initialization in 2 ms
