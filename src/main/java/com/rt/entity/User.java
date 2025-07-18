@@ -8,8 +8,8 @@ import lombok.*;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "signup")
-public class SignUp {
+@Table(name = "user")
+public class User{
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
