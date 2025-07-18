@@ -19,7 +19,7 @@ public class RoomsMapper {
 		AddRooms add=new AddRooms();
 		add.setId(reqDto.getId());
 		add.setAc_type(reqDto.getAc_type());
-		add.setRoom_types(reqDto.getRoom_types());
+		add.setRoomtypes(reqDto.getRoom_types());
 		add.setRoom_number(reqDto.getRoom_number());
 		add.setBed_count(reqDto.getBed_count());
 		add.setPrice_per_night(reqDto.getPrice_per_night());
@@ -42,7 +42,7 @@ public class RoomsMapper {
 			resDto.setDescription(add.getDescription());
 			resDto.setPrice_per_night(add.getPrice_per_night());
 			resDto.setRoom_image_path(add.getRoom_image_path());
-		    resDto.setRoom_types(add.getRoom_types());
+		    resDto.setRoom_types(add.getRoomtypes());
 		    resDto.setStatus(add.getStatus());
 		    
 		    resDtoList.add(resDto);
@@ -59,7 +59,7 @@ public class RoomsMapper {
 		
 		resDto.setId(addRooms.getId());
 		resDto.setAc_type(addRooms.getAc_type());
-		resDto.setRoom_types(addRooms.getRoom_types());
+		resDto.setRoom_types(addRooms.getRoomtypes());
 		resDto.setRoom_number(addRooms.getRoom_number());
 		resDto.setBed_count(addRooms.getBed_count());
 		resDto.setPrice_per_night(addRooms.getPrice_per_night());
