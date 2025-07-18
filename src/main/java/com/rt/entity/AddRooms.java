@@ -28,7 +28,7 @@ public class AddRooms {
 	private int room_number;
 
 	@Column(name = "room_types")
-	private String room_types;
+	private String roomtypes;
 
 	@Column(name = "bed_count")
 	private int bed_count;
