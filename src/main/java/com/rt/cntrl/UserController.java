@@ -10,23 +10,23 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rt.dto.SignUpRequestDto;
-import com.rt.service.SignUpService;
+import com.rt.dto.UserRequestDto;
+import com.rt.service.UserService;
 
 import lombok.val;
 
 @RestController
 @RequestMapping("/signUp_user")
 @CrossOrigin("*")
-public class SignUpController {
+public class UserController {
 	
 	@Autowired
-	private SignUpService signUpService; 
+	private UserService userService; 
 	
 	@PostMapping
-	public ResponseEntity<String> signUpUser(@RequestBody @Valid SignUpRequestDto reqDto ) {
+	public ResponseEntity<String> signUpUser(@RequestBody @Valid UserRequestDto userRequestDto ) {
 		
-		boolean isAdded=signUpService.signUpUser(reqDto);
+		boolean isAdded=userService.signUpUser(userRequestDto);
 		
 		if(isAdded) {
 			return ResponseEntity.ok("Data is saved to Database Successfully");
@@ -35,12 +35,6 @@ public class SignUpController {
 		}
 		
 		
-//		System.out.println(reqDto.getFirstName());
-//		System.out.println(reqDto.getLastName());
-//		System.out.println(reqDto.getEmail());
-//		System.out.println(reqDto.getMobile());
-//		System.out.println(reqDto.getPassword());
-//		System.out.println(reqDto.getRole());
-	}
+		}
 
 }
