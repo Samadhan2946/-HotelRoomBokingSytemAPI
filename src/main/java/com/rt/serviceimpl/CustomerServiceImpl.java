@@ -68,4 +68,13 @@ public class CustomerServiceImpl implements CustomerService {
 		return added;
 	}
 
+
+	@Override
+	public List<CustomerResponseDto> getAllCustomerNames() {
+	    List<Customer> customers = customerRepository.findAllCustomerNames(); 
+	    return customerMapper.toResponseByFullName(customers);
+	}
+
+
+
 }

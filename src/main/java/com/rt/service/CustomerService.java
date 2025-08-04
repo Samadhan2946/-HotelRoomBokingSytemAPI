@@ -4,6 +4,7 @@ package com.rt.service;
 
 import java.util.List;
 
+import com.rt.dto.AddRoomsResponseDto;
 import com.rt.dto.CustomerRequestDto;
 import com.rt.dto.CustomerResponseDto;
 
@@ -19,5 +20,11 @@ public interface CustomerService {
 	CustomerResponseDto updateCustomer(CustomerRequestDto customerRequestDto);
 
 	String deleteCustomer(Long id);
+
+	
+
+
+
+	List<CustomerResponseDto> getAllCustomerNames();
 
 }
