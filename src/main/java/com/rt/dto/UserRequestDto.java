@@ -14,6 +14,7 @@ import lombok.Setter;
 public class UserRequestDto {
 	
 
+	 private int id;
 
 
 	@NotNull
