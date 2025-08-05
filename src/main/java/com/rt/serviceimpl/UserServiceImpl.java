@@ -2,11 +2,13 @@ package com.rt.serviceimpl;
 
 import javax.validation.Valid;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.nt.dto.UserResponseDto;
+
 import com.rt.dto.UserRequestDto;
+import com.rt.entity.User;
 import com.rt.mapper.UserMapper;
 import com.rt.repository.UserRepository;
 import com.rt.service.UserService;
@@ -15,10 +17,10 @@ import com.rt.service.UserService;
 public class UserServiceImpl implements UserService {
 
 	@Autowired
-	private UserRepository userRepository;
+	private UserMapper userMapper;
 
 	@Autowired
-	private UserMapper userMapper;
+	private UserRepository userRepository;
 
 	@Override
 	public boolean signUpUser(@Valid UserRequestDto userRequestDto) {
@@ -29,6 +31,27 @@ public class UserServiceImpl implements UserService {
 			return true;
 		} else {
 			return false;
+		}
+	}
+
+	@Override
+	public UserResponseDto loginUser(@Valid UserRequestDto userRequestDto) {
+
+		User user = userRepository.findByEmail(userRequestDto.getEmail());
+
+		if (user != null) {
+			String pass = user.getPassword();
+			if (pass.equals(userRequestDto.getPassword())) {
+
+				UserResponseDto userResponseDto = new UserResponseDto();
+				userResponseDto.setEmail(user.getEmail());
+				userResponseDto.setRole(user.getRole());
+				return userResponseDto;
+			} else {
+				throw new RuntimeException("Invalid password");
+			}
+		} else {
+			throw new RuntimeException("User not found with email: " + userRequestDto.getEmail());
 		}
 	}
 
