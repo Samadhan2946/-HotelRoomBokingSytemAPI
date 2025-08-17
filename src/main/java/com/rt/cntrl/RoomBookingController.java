@@ -11,10 +11,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nt.dto.RoomBookingRequestDto;
+
 import com.rt.dto.AddRoomsResponseDto;
-import com.rt.dto.CustomerRequestDto;
+import com.rt.dto.CheckOutResponseDto;
 import com.rt.dto.CustomerResponseDto;
+import com.rt.dto.RoomBookingRequestDto;
+import com.rt.dto.RoomBookingResponseDto;
 import com.rt.service.CustomerService;
 import com.rt.service.RoomBookingService;
 
@@ -58,5 +60,11 @@ public class RoomBookingController {
 			return ResponseEntity.ok("Room is not Booked");
 		}
 
+	}
+	
+	
+	@GetMapping("/getAllBookings")
+	public List<RoomBookingResponseDto> getAllBookings() {
+		return roomBookingService.getAllBookings();
 	}
 }

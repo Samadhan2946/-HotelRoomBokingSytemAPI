@@ -7,9 +7,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class RoomBookingRequestDto {
-	private Long id; 
-	private Long customerId;
-	private String bookingDate;
+public class CheckOutRequestDto {
+
+	private Long bookingI;
 
 }

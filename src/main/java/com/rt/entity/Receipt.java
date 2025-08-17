@@ -1,5 +1,6 @@
 package com.rt.entity;
 
+
 import java.time.LocalDate;
 import javax.persistence.*;
 
@@ -8,11 +9,11 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
+@Table(name = "receipt")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "roombooking")
-public class RoomBooking {
+public class Receipt {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,4 +29,16 @@ public class RoomBooking {
 
     @Column(name = "booking_date")
     private LocalDate bookingDate;
+
+    @Column(name = "checkout_date")
+    private LocalDate checkoutDate;
+
+    @Column(name = "days_stayed")
+    private Long daysStayed;
+
+    @Column(name = "price_per_day")
+    private Double pricePerDay;
+
+    @Column(name = "total_amount")
+    private Double totalAmount;
 }

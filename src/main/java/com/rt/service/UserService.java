@@ -2,9 +2,8 @@ package com.rt.service;
 
 import javax.validation.Valid;
 
-import com.nt.dto.UserResponseDto;
-
 import com.rt.dto.UserRequestDto;
+import com.rt.dto.UserResponseDto;
 
 public interface UserService {
 

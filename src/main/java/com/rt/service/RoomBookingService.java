@@ -2,8 +2,9 @@ package com.rt.service;
 
 import java.util.List;
 
-import com.nt.dto.RoomBookingRequestDto;
 import com.rt.dto.AddRoomsResponseDto;
+import com.rt.dto.RoomBookingRequestDto;
+import com.rt.dto.RoomBookingResponseDto;
 
 public interface RoomBookingService {
 
@@ -13,4 +14,7 @@ public interface RoomBookingService {
 
 	boolean roomBookNow(RoomBookingRequestDto roomBookingRequestDto);
 
+	List<RoomBookingResponseDto> getAllBookings();
+
+	
 }

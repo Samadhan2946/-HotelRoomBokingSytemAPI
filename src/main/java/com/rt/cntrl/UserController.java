@@ -11,12 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.nt.dto.UserResponseDto;
-
 import com.rt.dto.UserRequestDto;
-
+import com.rt.dto.UserResponseDto;
 import com.rt.service.UserService;
-
 
 @RestController
 @RequestMapping("/signUp_user")

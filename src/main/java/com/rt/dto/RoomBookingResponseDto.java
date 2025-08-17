@@ -10,9 +10,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class RoomBookingResponseDto {
-	private int id;
-    private Long roomId;
-    private String customerName;
-    private LocalDate bookingDate;
+	
+	private Long id;
+	private String fullName;
+
+	private Long roomId;
+	private int bedCount;
+	private double pricePerNight;
+	private String status;
+
+	private LocalDate booking_date;
 
 }
