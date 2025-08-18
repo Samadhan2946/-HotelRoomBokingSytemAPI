@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 import com.rt.entity.Checkout;
 
 @Repository
-public interface CheckOutRepository extends CrudRepository<Checkout, Integer>{
+public interface CheckOutRepository extends CrudRepository<Checkout, Integer> {
+
+	void deleteAllById(Long checkOutId);
 
 }
