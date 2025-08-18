@@ -2,6 +2,7 @@ package com.rt.mapper;
 
 import org.springframework.stereotype.Component;
 
+import com.itextpdf.text.pdf.PdfStructTreeController.returnType;
 import com.rt.dto.ConfirmCheckOutRequestDto;
 import com.rt.entity.Checkout;
 
@@ -22,6 +23,16 @@ public class CheckOutMapper {
 		
 		
 		return checkout;
+		
+	}
+	
+	public Checkout toDeleteById(Long checkOutId) {
+		
+		Checkout checkout =new Checkout();
+		
+		checkout.setId(checkOutId);
+		
+		return  checkout;
 		
 	}
 }
